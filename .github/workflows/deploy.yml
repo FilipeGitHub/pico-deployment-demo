@@ -12,7 +12,7 @@ env:
     APP_NAME: blink
 
 # Allow this workflow to write back to rhe repository
-permission:
+permissions:
     contents: write
 
 # Build binary and send to releases
@@ -43,4 +43,4 @@ jobs:
             with: 
                 files: ${{ env.app_name }}.uf2
                 body_path: CHANGELOG.md
-                
+
