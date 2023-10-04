@@ -33,6 +33,9 @@ RUN \
 # Comand that will be invoked when the container starts
 ENTRYPOINT ["/bin/bash"]
 
+
 # docker build -t pico-builder-image .
 
-# docker create --name pico-builder-container ico-builder-image
+# docker create --name pico-builder-container pico-builder-image
+
+# docker cp pico-builder-container:/project/src/build/blink.uf2 ./blink.uf2

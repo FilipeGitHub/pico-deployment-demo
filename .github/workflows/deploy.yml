@@ -29,7 +29,7 @@ jobs:
             run: docker build -t pico-builder-image .
 
           - name: Create Docker container
-            run: docker create --name pico-builder-conrainer pico-builder-image
+            run: docker create --name pico-builder-container pico-builder-image
 
           - name: Copy out .uf2 file
             run: docker cp pico-builder-container:/project/src/build/${APP_NAME}.uf2 ./${APP_NAME}.uf2
